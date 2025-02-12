@@ -11,16 +11,20 @@ body {
     justify-content: center; 
     display: flex;
     margin-top: 50px;
+    background-attachment: fixed;
 }
 
 
 .container {
-    min-width: 1650px;
+    min-width: 1300px;
 }
+
+
 
 .header {
     display: flex;
-    width: 1650px;
+    width: 1200px;
+    margin-bottom: 60px;
 }
 .header__inner, .footer__inner {
     height: 100px; 
@@ -69,84 +73,116 @@ body {
 
 
 
-
-/* ДЛЯ FOOTER */
-.footer {
-    margin-top: 80px;
+/* ДЛЯ MAIN */
+.main {
+    padding-bottom: 50px;
 }
 
-/* Контейнер для всей формы */
-.data-picker {
+.main__inner {
+    width: 1200px;
+    height: auto;
+    background: rgba(153, 205, 216, 0.55);
+    backdrop-filter: blur(30px);
+    border-radius: 90px;
+    padding: 50px;
+}
+
+.content {
+    margin-top: 10px;
     display: flex;
-    align-items: center;
-    gap: 20px; /* Расстояние между элементами */
 }
 
-/* Индивидуальный контейнер для поля ввода */
-.input-container {
-    display: flex;
-    align-items: center;
-    background-color: #99cdd8; 
-    padding: 7.8px 13px; 
-    padding-right: 3.9px; 
-    border-radius: 65px; 
-    box-shadow: 0 2.6px 5.2px rgba(0, 0, 0, 0.1); 
-    width: 325px; 
-}
-
-/* Иконка календаря */
-.icon {
-    width: 31.2px; 
-    height: 31.2px; 
-    margin-right: 13px; 
-}
-
-/* Текст "ДАТА ЗАЕЗДА" и "ДАТА ВЫЕЗДА" */
-label {
+.info__1 .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-transform: lowercase;
     font-weight: bold;
-    font-size: 15.6px; 
-    margin-right: 10.4px; 
+    width: 700px;
+    height: auto;
+}
+
+.info__2 .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-transform: lowercase;
+    font-weight: bold;
+    width: 700px;
+    height: auto;
+}
+
+.info__1 img {
+    margin-left: auto;
+    height: 380px;
+}
+
+.stripe {
+    border: 1px solid #fff;
+    width: auto;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-top: 50px;
+    margin-bottom: 45px;
+}
+
+.info__2 .subtitle {
+    display: flex;
+    margin-left: auto;
+    text-align: right;
+}
+.info__2 .logo {
+    display: flex;
+    justify-content: end;
+}
+.info__2 img {
+    height: 348px;
+}
+
+.enter .title, .benefits .title, .rules .title{
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Поле ввода */
-input {
-    outline: none;
-    background: white; 
-    font-size: 15.6px; 
-    color: #000;
-    max-width: 120px; 
-    border-radius: 90px; 
-    height: 15px; /* Задайте высоту */
-    padding: 0;
-    border: 1px solid #000; 
+.enter p, .benefits p, .rules p {
+    text-align: start;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+p span {
+    font-size: 22px;
+}
+
+
+.button__container {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    display: inline-block;
+    padding: 16px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: #ffffff;
+    border-radius: 90px;
+    text-decoration: none;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    transition: opacity 0.3s;
+}
+.button:hover {
+    opacity: 0.7;
 }
 
-/* Placeholder */
-input::placeholder {
-    color: #888;
-    font-size: 12px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100% ;
-}
 
-.search {
-    max-width: 80px;
-}
-.search img{
-    width: 80px;
-    height: 80px;
-}
+
+
+
+
+
+
+
+
 
 
 
