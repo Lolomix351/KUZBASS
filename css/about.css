@@ -70,6 +70,10 @@ body {
     font-weight: 800;
 }
 
+.header__active.active {
+    font-weight: bold;
+}
+
 
 
 
