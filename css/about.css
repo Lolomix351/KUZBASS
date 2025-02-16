@@ -8,29 +8,27 @@ body {
     background-position: contain;
     background-repeat: no-repeat;
     height: 100vh;
-    justify-content: center; 
+    justify-content: center;
     display: flex;
-    margin-top: 50px;
-    background-attachment: fixed;
 }
 
 
 .container {
-    min-width: 1300px;
+    min-width: 1200px;
 }
-
-
 
 .header {
-    display: flex;
     width: 1200px;
-    margin-bottom: 60px;
-}
-.header__inner, .footer__inner {
-    height: 100px; 
+    height: 100px;
     background: rgba(140, 180, 150, 0.3);
     backdrop-filter: blur(20px);
     border-radius: 90px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +36,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.logo, .title{
+.logo {
     font-size: 28px;
     font-weight: 700;
     color: white;
@@ -50,6 +48,7 @@ body {
     display: flex;
     gap: 25px;
 }
+
 .nav a {
     font-size: 18px;
     font-weight: 400;
@@ -57,6 +56,7 @@ body {
     text-decoration: none;
     transition: opacity 0.3s;
 }
+
 .nav a:hover {
     opacity: 0.6;
 }
@@ -66,127 +66,310 @@ body {
     text-align: left;
     color: white;
 }
+
 .address span {
     font-weight: 800;
 }
 
-.header__active.active {
-    font-weight: bold;
+.container {
+    min-width: 1200px;
 }
 
+.logo-2 {
+    padding-left: 50px;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 10px #fff;
+    font-family: 'Open Sans';
+}
 
-
-
-/* ДЛЯ MAIN */
 .main {
-    padding-bottom: 50px;
+    padding-top: 80px;
 }
 
-.main__inner {
+.info {
     width: 1200px;
-    height: auto;
+    height: 1200px;
     background: rgba(153, 205, 216, 0.55);
     backdrop-filter: blur(30px);
     border-radius: 90px;
-    padding: 50px;
 }
 
-.content {
-    margin-top: 10px;
+.info-block__one {
+    gap: 300px;
+    padding-top: 80px;
     display: flex;
 }
 
-.info__1 .subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    text-transform: lowercase;
-    font-weight: bold;
-    width: 700px;
-    height: auto;
-}
-
-.info__2 .subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    text-transform: lowercase;
-    font-weight: bold;
-    width: 700px;
-    height: auto;
-}
-
-.info__1 img {
-    margin-left: auto;
-    height: 380px;
-}
-
-.stripe {
-    border: 1px solid #fff;
-    width: auto;
-    margin-left: -50px;
-    margin-right: -50px;
-    margin-top: 50px;
-    margin-bottom: 45px;
-}
-
-.info__2 .subtitle {
-    display: flex;
-    margin-left: auto;
-    text-align: right;
-}
-.info__2 .logo {
-    display: flex;
-    justify-content: end;
-}
-.info__2 img {
-    height: 348px;
-}
-
-.enter .title, .benefits .title, .rules .title{
-    text-align: center;
-}
-
-.enter p, .benefits p, .rules p {
-    text-align: start;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+.info-block__one-text {
+    margin-top: 5px;
+    width: 620px;
+    height: 204px;
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-weight: 700;
     font-size: 18px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.78);
+    padding-right: 30px;
+    margin-left: 40px;
 }
 
-p span {
-    font-size: 22px;
+.doc {
+    width: 325px;
+    height: 495px;
+    border-radius: 90px;
+    margin-left: 68px;
 }
 
+.slider-container {
+    position: absolute;
+    right: 0;
+    top: 310px;
+    height: calc(100vh - 100px);
+    /* Чтобы учитывать отступ сверху */
+}
 
-.button__container {
+.swiper {
+    width: 740px;
+    height: 890px;
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Перемещаем скроллбар вверх */
+.swiper-scrollbar {
+    position: absolute !important;
+    top: 20px !important;
+    /* Размещаем сверху */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 30% !important;
+    /* Делаем шире, но не на всю ширину */
+    height: 7px !important;
+    /* Делаем тонким */
+    background: rgba(255, 255, 255, 0.3) !important;
+    /* Полупрозрачный фон */
+    border-radius: 10px !important;
+}
+
+/* Делаем ползунок белым */
+.swiper-scrollbar-drag {
+    background: white !important;
+    border-radius: 10px !important;
+}
+
+.button-container {
+    text-align: center;
+    /* Center the button */
+    margin-top: 20px;
+}
+
+.learn-more-button {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 325px;
+    height: 54px;
+    border: none;
+    background: rgba(153, 205, 216, 0.86);
+    backdrop-filter: blur(30px);
+    border-radius: 90px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0px;
+    overflow: hidden;
+    margin-left: 68px;
+    margin-top: 27px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    gap: 0px;
+}
+
+.learn-more-button:hover {
+    transform: scale(1);
+    /*Slight scaling effect*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /*Increased shadow*/
+    opacity: 0.9;
+    /*Slightly reduce opacity*/
+}
+
+.learn-more-button:active {
+    transform: scale(1.);
+    /*Scale down slightly when pressed*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    /*Restore opacity*/
+}
+
+.learn-more-button:hover .button-icon {
+    transform: scale(1.1);
+    /*Zoom the icon*/
+    transition: transform 0.3s ease 0.2s;
+    /*Apply zoom with 1s delay*/
+}
+
+.learn-more-button:not(:hover) .button-icon {
+    transform: scale(1);
+    /*Reset after leaving hover*/
+    transition: transform 0.3s ease;
+    /*Reset transition*/
+}
+
+.button-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 250px;
+    position: absolute;
+}
+
+.button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-main-text {
+    position: relative;
+    width: 200px;
+    height: 29px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 29px;
+    color: #000000;
+    padding-right: 40px;
+}
+
+.button-subtext {
+    padding-top: 2px;
+    position: absolute;
+    width: 120px;
+    height: 24px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: 160px;
+}
+
+/* ДЛЯ FOOTER */
+.container {
+    min-width: 1200px;
+}
+.footer {
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+
+/* Контейнер для всей формы */
+.data-picker {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Расстояние между элементами */
+}
+
+/* Индивидуальный контейнер для поля ввода */
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #99cdd8; 
+    padding: 7.8px 13px; 
+    padding-right: 3.9px; 
+    border-radius: 65px; 
+    box-shadow: 0 2.6px 5.2px rgba(0, 0, 0, 0.1); 
+    width: 280px; 
+}
+
+/* Текст "ДАТА ЗАЕЗДА" и "ДАТА ВЫЕЗДА" */
+label {
+    font-weight: bold;
+    font-size: 15.6px; 
+    margin-right: 10.4px; 
+    text-align: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
-.button {
-    display: inline-block;
-    padding: 16px 35px;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    background-color: #ffffff;
+
+/* Поле ввода (размер теперь фиксированный) */
+input {
+    outline: none;
+    background: white;
+    font-size: 13px;
+    color: #000;
+    width: 90px; /* Фиксированная ширина */
+    height: 20px; /* Фиксированная высота */
     border-radius: 90px;
-    text-decoration: none;
+    padding: 0;
+    border: 1px solid #000;
     text-align: center;
-    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+
+    pointer-events: none; /* Запрещаем ввод вручную */
 }
-.button:hover {
-    opacity: 0.7;
+
+/* Иконка календаря */
+.icon {
+    width: 31.2px;
+    height: 31.2px;
+    margin-right: 13px;
+    cursor: pointer; /* Делаем иконку кликабельной */
 }
 
+/* Placeholder */
+input::placeholder {
+    color: #888;
+    font-size: 12px; 
+    display: flex;
+    align-items: center;
+    height: 100% ;
+}
 
+.search {
+    max-width: 80px;
+}
+.search img{
+    width: 50px;
+    height: 50px;
+}
 
+.container {
+    min-width: 1200px;
+}
 
+.footer__inner {
+    height: 100px; 
+    background: rgba(140, 180, 150, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-family: 'Montserrat', sans-serif;
+}
 
-
-
-
-
-
-
-
-
+.title{
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 10px #fff;
+    font-family: 'Open Sans';
+}

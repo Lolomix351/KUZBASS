@@ -33,6 +33,10 @@ body {
     opacity: 0.6;
 }
 
+.header__active.active {
+    font-weight: bold;
+}
+
 
 
 /* ДЛЯ HEADER */
@@ -147,7 +151,7 @@ span {
 }
 
 input {
-    width: 300px;
+    width: 300px ;
     padding: 8px 8px 15px 8px;
     margin-top: 5px;
     border: 2px solid black;
